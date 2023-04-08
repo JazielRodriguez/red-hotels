@@ -1,0 +1,15 @@
+.form .input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.form .input-styling {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.form .input-styling label,
+.form .input-styling select {
+  width: 50%;
+}

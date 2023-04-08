@@ -1,0 +1,23 @@
+.actions-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+  color: var(--metal);
+}
+.action-nav-book-link {
+  background-color: var(--red);
+  color: var(--cream);
+  padding: 1rem 2rem;
+}
+.actions-nav button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--cream);
+  font-size: 2rem;
+  cursor: pointer;
+}
+.actions-nav button:hover {
+  border: 1px solid var(--metal);
+  border-radius: 8px;
+}

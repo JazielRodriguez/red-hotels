@@ -1,0 +1,33 @@
+.cover {
+  position: relative;
+}
+.cover-img-container {
+  position: relative;
+  aspect-ratio: 16/9;
+}
+.cover-content-container {
+  position: absolute;
+  top: 0rem;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.cover-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+  height: 100%;
+  width: 100%;
+  background-color: var(--metalTransparent);
+}
+.cover-content-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cover-content h1,
+.cover-content p {
+  color: var(--cream);
+}
