@@ -9,13 +9,21 @@
 .progress-steps-completed {
   background-color: var(--red);
   border-radius: 50%;
-  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 4rem;
 }
 .progress-steps {
   border-radius: 50%;
-  padding: 1rem 1.5rem;
   background-color: var(--cream);
   border: 1px solid var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 4rem;
 }
 .progress-steps p {
   color: var(--red);
