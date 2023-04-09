@@ -3,34 +3,39 @@ import SelectRegion from "./SelectRegion";
 import SelectCountry from "./SelectCountry";
 import SelectHotel from "./SelectHotel";
 import styles from "../../styles/FormPlaces.module.css";
-const FormPlaces: React.FC = () => {
+interface Props {
+  regionIsSelected: boolean;
+  countryIsSelected: boolean;
+  onSetRegionIsSelected: (value: boolean) => void;
+  onSetCountryIsSelected: (value: boolean) => void;
+}
+const FormPlaces: React.FC<Props> = (props) => {
   const [region, setRegion] = useState<string>("");
   const [country, setCountry] = useState<string>("");
   const [hotel, setHotel] = useState<string>("");
-  const [regionIsSelected, setRegionIsSelected] = useState<boolean>(false);
-  const [countryIsSelected, setCountryIsSelected] = useState<boolean>(false);
+
   const selectRegionHandler = (region: string) => {
     setRegion(region);
-    setRegionIsSelected(true);
+    props.onSetRegionIsSelected(true);
   };
   const selectCountryHandler = (country: string) => {
     setCountry(country);
-    setCountryIsSelected(true);
+    props.onSetCountryIsSelected(true);
   };
   const selectHotelHandler = (hotel: string) => {
     setHotel(hotel);
   };
   return (
     <form className={styles.form}>
-      {!regionIsSelected && (
+      {!props.regionIsSelected && (
         <SelectRegion
           onSetRegion={selectRegionHandler}
           styles={styles["input-container"]}
           inputStyling={styles["input-styling"]}
         />
       )}
-      {countryIsSelected ||
-        (regionIsSelected && (
+      {props.countryIsSelected ||
+        (props.regionIsSelected && (
           <SelectCountry
             onSetCountry={selectCountryHandler}
             region={region}
@@ -38,7 +43,7 @@ const FormPlaces: React.FC = () => {
             inputStyling={styles["input-styling"]}
           />
         ))}
-      {countryIsSelected && (
+      {props.countryIsSelected && (
         <SelectHotel
           onSetHotel={selectHotelHandler}
           country={country}

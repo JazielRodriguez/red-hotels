@@ -1,0 +1,42 @@
+.page {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--metal);
+  display: flex;
+}
+.message {
+  width: 50%;
+  height: 100vh;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.status {
+  margin: 0 auto;
+  color: var(--red);
+  width: 50%;
+  align-self: flex-start;
+}
+.link {
+  background-color: var(--red);
+  padding: 2rem;
+  color: var(--cream);
+  border-radius: 4px;
+}
+.logo {
+  width: 50%;
+  height: 100vh;
+  background-color: var(--red);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+}
+.logo div {
+  padding: 1rem;
+  border: 8px solid var(--cream);
+}
